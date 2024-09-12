@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=New+Amsterdam&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        background-image: url("static/imgs/full_blured.jpg");
+        height: calc(100dvh);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        width: fit-content;
+        max-width: 600px;
+        color: white;
+        text-align: center;
+        font-weight: bolder;
+        padding: 15px 15px;
+        border-radius: 4px;
+        background-color: #0000004e;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .content span {
+        color: gold;
+      }
+      .content .code {
+        color: #ff006eff;
+      }
+      .rights {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50% 0;
+        font-weight: bolder;
+        color: white;
+        font-size: 20px;
+        text-shadow:
+          1px 0 4px #000,
+          1px 0 4px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div>No <span>Bank</span> Account Was Found With Code</div>
+      <div class="code">{{key_code}}</div>
+    </div>
+    <div class="rights">
+      <p>MF751</p>
+    </div>
+  </body>
+</html>

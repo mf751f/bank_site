@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=New+Amsterdam&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/normalize.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        background-image: url("static/imgs/full_blured.jpg");
+        height: calc(100dvh);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+      }
+      .content {
+        font-size: 12px;
+        width: fit-content;
+        max-width: 600px;
+        color: white;
+        text-align: center;
+        font-weight: bolder;
+        padding: 15px 15px;
+        border-radius: 4px;
+        background-color: #0000004e;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+      .content .code {
+        background-color: #ff0041ff;
+        color: white;
+        font-weight: bolder;
+        padding: 3px 6px;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .content:has(.code) {
+        justify-content: center;
+      }
+      .rights {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50% 0;
+        font-weight: bolder;
+        color: white;
+        font-size: 20px;
+        text-shadow:
+          1px 0 4px #000,
+          1px 0 4px #000;
+      }
+      .content > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: start;
+        gap: 5px;
+      }
+      .content .keys {
+        flex-basis: 35% 2;
+      }
+      .content .vals {
+        flex-basis: 65% 1;
+      }
+      .content div div {
+        background-color: #ffffffd9;
+        color: black;
+        font-weight: bolder;
+        padding: 3px 6px;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .titles {
+        padding: 20px;
+      }
+      @media (max-width: 400px) {
+        .titles {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content"><div class="code">{{key_code}}</div></div>
+    <div class="content">
+      <div class="keys">
+        <div>Amino</div>
+        <div>Amount</div>
+        <div>Is Vip</div>
+        {% if vip_text == "Yes" %}
+        <div>gifts</div>
+        {% endif %} {% if at != "not" %}
+        <div class="titles">Archived Titels</div>
+        {% endif %}
+      </div>
+      <div class="values">
+        <div>{{amino_link}}</div>
+        <div>{{amount}}</div>
+        <div>{{vip_text}}</div>
+        {% if vip_text == "Yes" %}
+        <div>{{vip_actions}}</div>
+        {% endif %} {% if at != "not" %}
+        <div class="titles">{{at}}</div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="rights">
+      <p>MF751</p>
+    </div>
+  </body>
+</html>

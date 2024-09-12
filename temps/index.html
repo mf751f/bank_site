@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="static/normlize.css" />
+    <link href="static/index.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=New+Amsterdam&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="header">One Piece Arabic <span>Bank</span></h2>
+      <div class="code">
+        <form action="">
+          <label class="lable" for="code">Code </label>
+          <input
+            type="text"
+            name="code"
+            value=""
+            placeholder="cfb4bb5463...."
+            class="input"
+          />
+          <input type="submit" value="Send" class="send" id="send" />
+        </form>
+      </div>
+      <a href="" class="more">More about.</a>
+    </div>
+    {% if message %}
+    <p class="message">{{message}}</p>
+    {% endif %}
+    <div class="rights">
+      <p>MF751</p>
+    </div>
+  </body>
+</html>
